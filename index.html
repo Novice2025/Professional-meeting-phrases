@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Meeting Expressions Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .container {
+            max-width: 900px;
+            padding: 2rem;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e2e8f0;
+        }
+        .expression-card {
+            border-left: 4px solid #3b82f6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .expression-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .interactive-card {
+            border: 1px solid #cbd5e1;
+            background-color: #f1f5f9;
+        }
+        .drag-item {
+            cursor: grab;
+        }
+        .drag-item.dragging {
+            opacity: 0.5;
+        }
+        .drop-target {
+            border: 2px dashed #94a3b8;
+        }
+        .drop-target.hovered {
+            border-color: #3b82f6;
+            background-color: #e0f2fe;
+        }
+        .correct {
+            background-color: #dcfce7;
+            border-color: #22c55e;
+        }
+        .incorrect {
+            background-color: #fee2e2;
+            border-color: #ef4444;
+        }
+        .message-box {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+            font-weight: 500;
+        }
+        .message-box.correct {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        .message-box.incorrect {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="message-box" id="message-box"></div>
+
+    <div class="container mx-auto">
+        <header class="text-center py-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">Professional Meeting Expressions Guide</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-600 font-light">Elevate your corporate vocabulary with high-impact phrases for effective communication.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <!-- Core Meeting Phrases Section -->
+            <section class="section">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Core Meeting Phrases</h2>
+                <p class="text-gray-600 mb-8">These expressions are essential for navigating common meeting situations, from opening a discussion to wrapping up.</p>
+                
+                <!-- Phrase 1: To set the stage -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">1. To set the stage</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To prepare the scene</p>
+                    <p class="mt-2"><strong>Scenario:</strong> You are about to present a new strategic plan to the board. Before diving into the details, you need to provide a high-level overview of the market conditions and business challenges that led to this plan.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Before we get into the specifics, I'd like to **set the stage** by quickly reviewing our market position and recent competitor activity."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Para contextualizar" ou "Para dar o cenário geral"</p>
+                </div>
+                
+                <!-- Phrase 2: To shed some light on -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">2. To shed some light on</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To bring some light on</p>
+                    <p class="mt-2"><strong>Scenario:</strong> The financial report contains some unusual data points. As the finance director, you are asked to explain the reason behind them.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Can you **shed some light on** the Q2 expenditure report? I'm not clear on the high spending in the marketing department."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Para esclarecer" ou "Para explicar"</p>
+                </div>
+                
+                <!-- Phrase 3: To be on the same page -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">3. To be on the same page</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To be on the same page of a book</p>
+                    <p class="mt-2"><strong>Scenario:</strong> A project team is preparing for a client presentation. The project manager wants to quickly confirm that everyone has the same understanding of the goals, timeline, and key deliverables before the meeting.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Before we go into the client meeting, I just want to make sure we’re all **on the same page** regarding the proposal and the pricing."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Estar de acordo" ou "Estar alinhado"</p>
+                </div>
+
+                <!-- Phrase 4: To have the ball in one's court -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">4. To have the ball in one's court</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To have the ball on your side of the court</p>
+                    <p class="mt-2"><strong>Scenario:</strong> After a discussion, your team has decided on a course of action and the next steps depend on another department's approval. You are ending your part of the discussion and passing the responsibility.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "We've completed the market analysis, so now the **ball is in the marketing team's court** to propose the ad campaign."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "A bola está com você" ou "Agora é com você"</p>
+                </div>
+
+                <!-- Phrase 5: The bottom line -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">5. The bottom line</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: The last line of a financial report</p>
+                    <p class="mt-2"><strong>Scenario:</strong> A lengthy discussion about project features has gone on for a long time. You need to steer the conversation toward the most critical point: the financial impact on the company.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "We’ve discussed all the features, but **the bottom line** is that we can’t afford to implement all of them with the current budget."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "O ponto principal" ou "O que realmente importa"</p>
+                </div>
+
+                <!-- Phrase 6: To circle back -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">6. To circle back</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To turn around and come back</p>
+                    <p class="mt-2"><strong>Scenario:</strong> A team member raises a good, but complex, issue that is outside the scope of the current meeting's agenda. You want to acknowledge it without getting sidetracked and promise to address it later.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "That’s an excellent point, but we’re a bit short on time today. Let's **circle back** to it in our next one-on-one."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Voltar ao assunto" ou "Retomar a discussão"</p>
+                </div>
+
+                <!-- Phrase 7: To keep a conversation on track -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">7. To keep a conversation on track</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To keep a train on its rails</p>
+                    <p class="mt-2"><strong>Scenario:</strong> The meeting has gone on for too long, and a team member starts discussing a personal anecdote that has nothing to do with the project. You need to politely interrupt and get the team back to the main topic.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "I’m mindful of the time. Let’s **keep this conversation on track** so we can finish on schedule."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Manter o foco" ou "Não desviar do assunto"</p>
+                </div>
+            </section>
+
+            <!-- Strategic Thinking Section -->
+            <section class="section">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Strategic Thinking</h2>
+                <p class="text-gray-600 mb-8">Use these phrases to elevate the conversation to a strategic level, focusing on long-term vision and impact.</p>
+
+                <!-- Phrase 8: To think outside the box -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">8. To think outside the box</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To think outside the limits of a box</p>
+                    <p class="mt-2"><strong>Scenario:</strong> The team is trying to solve a persistent problem with the product, but all the proposed solutions are conventional and have been tried before without success. You need to encourage them to explore innovative and unconventional ideas.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Our usual approach isn't working. We need to **think outside the box** and come up with a creative solution."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Pensar fora da caixa"</p>
+                </div>
+
+                <!-- Phrase 9: To see the bigger picture -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">9. To see the bigger picture</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To see the complete image</p>
+                    <p class="mt-2"><strong>Scenario:</strong> A team member is focused on a small bug that, while annoying, doesn't impact the main functionality of the product. The project is already behind schedule and requires a more strategic focus.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "While that bug is important, we need to **see the bigger picture** and focus on launching the core features first."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Ter uma visão geral" ou "Olhar o cenário completo"</p>
+                </div>
+
+                <!-- Phrase 10: To move the needle -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">10. To move the needle</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To cause a change on an indicator needle</p>
+                    <p class="mt-2"><strong>Scenario:</strong> Your team has a lot of small tasks but lacks a clear direction. You need to prioritize tasks that will have a significant, measurable impact on the company's goals.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "We can’t afford to waste time on low-impact tasks. We need to focus on what will really **move the needle** for our Q4 revenue goals."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Gerar um impacto real" ou "Fazer a diferença"</p>
+                </div>
+
+                <!-- Phrase 11: To be at a crossroads -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">11. To be at a crossroads</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To be at a road intersection</p>
+                    <p class="mt-2"><strong>Scenario:</strong> Your company is considering two very different paths for its future. One is a conservative, incremental growth strategy, and the other is an aggressive expansion into a new market. You need to present the situation as a critical decision point.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "We are **at a crossroads**: do we invest heavily in a new market or do we optimize our existing product line?"</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Estar em uma encruzilhada" ou "Estar em um ponto de decisão"</p>
+                </div>
+            </section>
+            
+            <!-- Additional Strategic Expressions -->
+            <section class="section">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Strategic Expressions</h2>
+                <p class="text-gray-600 mb-8">Expand your vocabulary with these phrases for nuanced and powerful communication.</p>
+
+                <!-- Phrase 12: To connect the dots -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">12. To connect the dots</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To unite the dots to form a picture</p>
+                    <p class="mt-2"><strong>Scenario:</strong> During a presentation, you notice that the data from three different departments, while seemingly unrelated, tell a compelling story. You need to help the team see the underlying trend.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "If we **connect the dots** between the sales data, customer support tickets, and recent market feedback, we can see a clear need for a new product feature."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Ligar os pontos" ou "Entender a relação"</p>
+                </div>
+
+                <!-- Phrase 13: To drill down into the details -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">13. To drill down into the details</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To go deeper by drilling</p>
+                    <p class="mt-2"><strong>Scenario:</strong> After a high-level overview of the Q3 results, the CEO wants to understand the specifics of the sales figures in the European market. You need to signal that you are moving from a general view to a more specific one.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Now that we’ve covered the summary, let’s **drill down into the details** of our European sales performance."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Analisar em detalhes" ou "Aprofundar nos detalhes"</p>
+                </div>
+
+                <!-- Phrase 14: To keep someone in the loop -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">14. To keep someone in the loop</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To keep someone in a communication circle</p>
+                    <p class="mt-2"><strong>Scenario:</strong> You're collaborating on a project with a team from another region. To ensure smooth communication and alignment, you promise to send them regular updates on your progress.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "I’ll make sure to **keep you in the loop** on any changes to the project timeline."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Manter informado" ou "Manter a par"</p>
+                </div>
+
+                <!-- Phrase 15: To get buy-in from someone -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">15. To get buy-in from someone</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To make someone agree to buy something</p>
+                    <p class="mt-2"><strong>Scenario:</strong> You are about to propose a new process that will require a significant change in how your team works. You know it will be met with resistance, so you need to present it in a way that gets their support and approval first.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Before we can move forward with this new software, we need to **get buy-in from** the entire sales team."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Obter a aprovação" ou "Ter o apoio de"</p>
+                </div>
+
+                <!-- Phrase 16: To touch base -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">16. To touch base</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To contact a base</p>
+                    <p class="mt-2"><strong>Scenario:</strong> You are about to finish a meeting and need to schedule a follow-up. You want to suggest a quick informal meeting to check on the progress.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Let’s **touch base** next week to see how the project is progressing."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Entrar em contato" ou "Falar rapidamente"</p>
+                </div>
+                
+                <!-- Phrase 17: To take a deep dive -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">17. To take a deep dive</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To do a deep dive</p>
+                    <p class="mt-2"><strong>Scenario:</strong> You have presented a high-level overview of the sales data for the quarter. Now, the team wants to analyze the numbers for a specific product line in much greater detail.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "Now that we've seen the big picture, let's **take a deep dive** into the Q3 results for our new product line."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Analisar em profundidade" ou "Aprofundar a análise"</p>
+                </div>
+
+                <!-- Phrase 18: To stay in the loop -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">18. To stay in the loop</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To stay in a communication circle</p>
+                    <p class="mt-2"><strong>Scenario:</strong> A colleague who is not directly involved in a project expresses interest in following its progress. You want to offer to include them on relevant email updates.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "I’ll add you to the distribution list so you can **stay in the loop** on our progress."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Manter-se informado" ou "Estar a par"</p>
+                </div>
+            </section>
+            
+            <!-- Closing Phrases Section -->
+            <section class="section">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Closing & Follow-Up Phrases</h2>
+                <p class="text-gray-600 mb-8">Use these expressions to professionally end a meeting, summarize key points, and establish next steps.</p>
+
+                <!-- Phrase 19: To wrap things up -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">19. To wrap things up</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To cover something with paper</p>
+                    <p class="mt-2"><strong>Scenario:</strong> The meeting has reached its scheduled end time, and you need to bring the discussion to a close and summarize the outcomes.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "We’re running out of time, so let’s **wrap things up** and summarize our action items."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Para finalizar" ou "Para encerrar"</p>
+                </div>
+
+                <!-- Phrase 20: To table a discussion -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">20. To table a discussion</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To place an item on the table</p>
+                    <p class="mt-2"><strong>Scenario:</strong> An important topic is brought up that requires more research and data before a decision can be made. You need to postpone the discussion for a later time.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "That's a critical point, but we don't have all the data. Let's **table this discussion** for our next meeting when we have the Q3 report."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Adiar uma discussão" ou "Deixar para depois"</p>
+                </div>
+
+                <!-- Phrase 21: To get the green light -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">21. To get the green light</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To get a green traffic light</p>
+                    <p class="mt-2"><strong>Scenario:</strong> You've presented your project proposal to the leadership team, and now you are waiting for their final approval to begin implementation.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "We've submitted the budget proposal and we're just waiting **to get the green light** from the finance department before we can start."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Obter a luz verde" ou "Receber a aprovação"</p>
+                </div>
+
+                <!-- Phrase 22: To be on the back burner -->
+                <div class="expression-card p-6 mb-6 bg-white rounded-lg shadow-sm border-l-4 border-blue-500">
+                    <p class="text-lg font-semibold text-blue-700">22. To be on the back burner</p>
+                    <p class="text-sm text-gray-500 italic mb-2">Literal meaning: To be on the back of a stove</p>
+                    <p class="mt-2"><strong>Scenario:</strong> A project that was once a priority has been postponed due to a shift in company strategy. You need to inform a colleague that it's no longer a main focus.</p>
+                    <p class="mt-2 text-blue-900"><strong>Example:</strong> "That project is important, but for now, it will have **to be on the back burner** as we prioritize the Q4 product launch."</p>
+                    <p class="mt-2 text-sm text-gray-600"><strong>🇧🇷 Brazilian Portuguese:</strong> "Ficar em segundo plano" ou "Ser adiado"</p>
+                </div>
+            </section>
+            
+            <!-- Interactive Exercises & Scenarios -->
+            <section class="section interactive-card">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Interactive Exercises & Scenarios</h2>
+                <p class="text-gray-600 mb-8">Test your knowledge with these interactive exercises and practice scenarios!</p>
+
+                <!-- Translation Exercise -->
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Translation Exercise (Portuguese to English)</h3>
+                    <p class="text-gray-700 mb-4">As requested, these are the phrases a Brazilian professional would actually use. Type the English equivalent and click 'Check'.</p>
+                    
+                    <div id="translation-quiz-container" class="space-y-4">
+                        <!-- Questions will be injected here by JS -->
+                    </div>
+                </div>
+
+                <!-- Matching Activity -->
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Matching Activity (Match the phrase with its meaning)</h3>
+                    <p class="text-gray-700 mb-4">Drag the meaning on the right to the correct phrase on the left.</p>
+
+                    <div id="matching-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div id="phrases-column" class="flex flex-col space-y-4">
+                            <!-- Phrases will be injected here -->
+                        </div>
+                        <div id="meanings-column" class="flex flex-col space-y-4">
+                            <!-- Meanings will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulation Scenarios -->
+                <div class="mb-10">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Simulation Scenarios</h3>
+                    <p class="text-gray-700 mb-4">Practice using the expressions in realistic meeting contexts. Read the scenario and then use the provided phrases to form your response.</p>
+                    
+                    <!-- Scenario 1 -->
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200 mb-4">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900">Scenario 1: The Product Launch Meeting</h4>
+                        <p class="text-gray-700 mb-3">You're in a meeting to discuss the Q4 product launch. The team is spending too much time arguing over a minor UI detail. You need to get the discussion back on track and decide who will lead the final tasks.</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li><strong>Use:</strong> "Let's not lose sight of the bigger picture." to refocus the team.</li>
+                            <li><strong>Say:</strong> "Let's put this into perspective." to remind everyone of the overall project goal.</li>
+                            <li><strong>Ask:</strong> "Are we all aligned on this?" to check for consensus on the overall strategy.</li>
+                            <li><strong>Suggest:</strong> "Let’s agree on next steps." to outline the final tasks.</li>
+                            <li><strong>Finally, say:</strong> "I'll take the lead on this." to volunteer for a key task.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Scenario 2 -->
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200 mb-4">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900">Scenario 2: The New Strategy Brainstorm</h4>
+                        <p class="text-gray-700 mb-3">Your team's current strategy isn't performing well. You've been tasked with a brainstorming session. You need to encourage creative ideas and then summarize the most important point.</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li><strong>Begin with:</strong> "To set the stage..." to provide context.</li>
+                            <li><strong>Say:</strong> "We need to think outside the box." to encourage new ideas.</li>
+                            <li><strong>Use:</strong> "Let's play devil's advocate for a moment." to constructively challenge a new proposal.</li>
+                            <li><strong>Acknowledge a team member with:</strong> "I'd like to get your perspective on this." to encourage their input.</li>
+                            <li><strong>Conclude with:</strong> "The key takeaway here is..." to highlight the most promising idea.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Scenario 3 -->
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-900">Scenario 3: The Project Progress Review</h4>
+                        <p class="text-gray-700 mb-3">You are reviewing a project that is behind schedule. Some minor issues are being raised that are not on the agenda. You need to postpone the side discussions and emphasize the urgency of the main goal.</p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li><strong>Start with:</strong> "This is a high-level overview." to frame your update.</li>
+                            <li><strong>Tell the team:</strong> "We're running out of runway." to express urgency.</li>
+                            <li><strong>Suggest:</strong> "Let's take this offline." to handle side discussions.</li>
+                            <li><strong>Use:</strong> "Let's park that idea for now." for non-urgent new ideas.</li>
+                            <li><strong>Remind them of the progress by saying:</strong> "We're moving the needle on this." to show that their work is having an effect.</li>
+                            <li><strong>Finish by saying:</strong> "The ball is in our court." to transfer responsibility for the next steps back to the team.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // --- Translation Exercise Logic ---
+        const translationData = [
+            { pt: "Vamos direto ao ponto", en: "Let's get straight to the point" },
+            { pt: "Para dar início", en: "Let's kick things off with" },
+            { pt: "Concordo plenamente", en: "I couldn't agree more" },
+            { pt: "Vamos definir os próximos passos", en: "Let's agree on next steps" },
+            { pt: "Precisamos ter uma visão estratégica", en: "We need to take a strategic view" },
+            { pt: "O tempo é curto, então precisamos ser objetivos", en: "Time is of the essence" },
+            { pt: "Vamos deixar essa ideia de lado", en: "Let's park that idea" },
+            { pt: "É importante não perder o foco no cenário geral", en: "Let's not lose sight of the bigger picture" },
+            { pt: "Vamos avaliar os prós e contras", en: "Let's weigh the pros and cons" },
+            { pt: "A bola está conosco", en: "The ball is in our court" },
+            { pt: "Para finalizar", en: "To wrap things up" },
+            { pt: "Deixar essa discussão para depois", en: "To table this discussion" },
+            { pt: "Ter o sinal verde", en: "To get the green light" },
+            { pt: "Ficar em segundo plano", en: "To be on the back burner" },
+            { pt: "Entrar em contato", en: "To touch base" },
+            { pt: "Analisar a fundo", en: "To take a deep dive" },
+            { pt: "Ficar por dentro do assunto", en: "To stay in the loop" }
+        ];
+
+        const translationContainer = document.getElementById('translation-quiz-container');
+        translationData.forEach((item, index) => {
+            const quizItem = document.createElement('div');
+            quizItem.className = 'flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4';
+            quizItem.innerHTML = `
+                <p class="text-lg font-medium text-gray-800 flex-shrink-0">${index + 1}. ${item.pt}</p>
+                <div class="flex flex-col sm:flex-row flex-grow w-full space-y-2 sm:space-y-0 sm:space-x-2">
+                    <input type="text" class="flex-grow w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your answer...">
+                    <button class="check-btn bg-blue-500 text-white px-6 py-2 rounded-md font-semibold transition-colors duration-200 hover:bg-blue-600">Check</button>
+                </div>
+            `;
+            translationContainer.appendChild(quizItem);
+        });
+
+        translationContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('check-btn')) {
+                const quizItem = e.target.closest('div.flex.flex-col.sm\\:flex-row.items-start');
+                const input = quizItem.querySelector('input');
+                const index = Array.from(translationContainer.children).indexOf(quizItem);
+                const isCorrect = input.value.trim().toLowerCase() === translationData[index].en.toLowerCase();
+                
+                input.classList.remove('border-gray-300', 'border-red-500', 'border-green-500');
+                if (isCorrect) {
+                    input.classList.add('border-green-500', 'bg-green-50');
+                    showMessage("Correct! ✅", true);
+                } else {
+                    input.classList.add('border-red-500', 'bg-red-50');
+                    showMessage(`Incorrect. The correct answer is: "${translationData[index].en}".`, false);
+                }
+            }
+        });
+
+        function showMessage(msg, isCorrect) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = msg;
+            messageBox.style.display = 'block';
+            messageBox.classList.remove('correct', 'incorrect');
+            messageBox.classList.add(isCorrect ? 'correct' : 'incorrect');
+            setTimeout(() => {
+                messageBox.style.display = 'none';
+            }, 3000);
+        }
+
+        // --- Matching Activity Logic ---
+        const matchingData = [
+            { id: 'phrase1', text: 'To shed some light on', meaning: 'To provide clarity or explanation' },
+            { id: 'phrase2', text: 'The bottom line', meaning: 'The most important or crucial point' },
+            { id: 'phrase3', text: 'To be on the same page', meaning: 'To have the same understanding or agreement' },
+            { id: 'phrase4', text: 'To get buy-in', meaning: 'To get approval or support from stakeholders' },
+            { id: 'phrase5', text: 'To move the needle', meaning: 'To make a significant impact or progress' },
+            { id: 'phrase6', text: 'To touch base', meaning: 'To make brief contact or meet with someone' },
+            { id: 'phrase7', text: 'To take a deep dive', meaning: 'To examine something in great detail' },
+            { id: 'phrase8', text: 'To get the green light', meaning: 'To receive approval to proceed with a plan or project' },
+            { id: 'phrase9', text: 'To circle back', meaning: 'To revisit a topic or issue later' },
+            { id: 'phrase10', text: 'To be on the back burner', meaning: 'To be postponed or a low priority for now' }
+        ];
+
+        const phrasesColumn = document.getElementById('phrases-column');
+        const meaningsColumn = document.getElementById('meanings-column');
+
+        const shuffledMeanings = [...matchingData].sort(() => Math.random() - 0.5);
+
+        matchingData.forEach(item => {
+            const phraseEl = document.createElement('div');
+            phraseEl.id = item.id;
+            phraseEl.className = 'phrase p-4 rounded-lg bg-gray-100 flex items-center justify-between shadow-sm';
+            phraseEl.innerHTML = `<span class="font-medium">${item.text}</span>`;
+            phrasesColumn.appendChild(phraseEl);
+        });
+
+        shuffledMeanings.forEach(item => {
+            const meaningEl = document.createElement('div');
+            meaningEl.id = item.id + '-meaning';
+            meaningEl.className = 'drag-item p-4 rounded-lg bg-gray-200 shadow-sm transition-transform duration-100 ease-in-out';
+            meaningEl.setAttribute('draggable', true);
+            meaningEl.textContent = item.meaning;
+            meaningsColumn.appendChild(meaningEl);
+        });
+
+        let draggedItem = null;
+
+        document.querySelectorAll('.drag-item').forEach(item => {
+            item.addEventListener('dragstart', (e) => {
+                draggedItem = e.target;
+                e.target.classList.add('dragging');
+            });
+            item.addEventListener('dragend', (e) => {
+                e.target.classList.remove('dragging');
+            });
+        });
+
+        document.querySelectorAll('.phrase').forEach(phrase => {
+            const dropTarget = document.createElement('div');
+            dropTarget.className = 'drop-target h-12 rounded-lg my-2';
+            phrase.parentNode.insertBefore(dropTarget, phrase.nextSibling);
+
+            dropTarget.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropTarget.classList.add('hovered');
+            });
+            dropTarget.addEventListener('dragleave', (e) => {
+                dropTarget.classList.remove('hovered');
+            });
+            dropTarget.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropTarget.classList.remove('hovered');
+
+                if (draggedItem) {
+                    const phraseId = phrase.id;
+                    const meaningId = draggedItem.id.replace('-meaning', '');
+
+                    if (phraseId === meaningId) {
+                        // Correct match
+                        phrase.classList.add('correct');
+                        draggedItem.classList.add('correct');
+                        
+                        // Replace drop target with the dropped item
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'p-4 rounded-lg correct shadow-sm';
+                        wrapper.textContent = draggedItem.textContent;
+                        dropTarget.parentNode.replaceChild(wrapper, dropTarget);
+                        
+                        draggedItem.style.display = 'none';
+                        showMessage("Correct Match! ✅", true);
+                    } else {
+                        // Incorrect match
+                        phrase.classList.add('incorrect');
+                        draggedItem.classList.add('incorrect');
+                        showMessage("Incorrect Match. Try again!", false);
+                        
+                        setTimeout(() => {
+                            phrase.classList.remove('incorrect');
+                            draggedItem.classList.remove('incorrect');
+                        }, 1000);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
